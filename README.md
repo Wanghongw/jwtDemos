@@ -1,2 +1,2 @@
 
-### 基于django、flask、DRF实现的jwt实例
+### 基于Django、DRF、Flask实现的jwt实例
