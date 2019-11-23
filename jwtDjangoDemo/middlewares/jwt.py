@@ -36,9 +36,10 @@ class JwtAuthorizationMiddleware(MiddlewareMixin):
     """
     def process_request(self, request):
 
-        # 如果是登录页面，则通过
-        if request.path_info == '/login/':
-            return
+        # 白名单放行
+        for i in WHITE_LIST:
+            if re.search(request.path_info, i):
+                return
 
         # 非登录页面需要校验token
         authorization = request.META.get('HTTP_AUTHORIZATION', '')
