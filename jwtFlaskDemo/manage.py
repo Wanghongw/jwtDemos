@@ -53,7 +53,7 @@ def login():
     # 检测用户和密码是否正确，此处可以在数据进行校验。
     if user == 'whw' and pwd == '666':
         # 用户名和密码正确，给用户生成token并返回
-        token = create_token({'username': 'wupeiqi'})
+        token = create_token({'username': 'whw'})
         return jsonify({'status': True, 'token': token})
     return jsonify({'status': False, 'error': '用户名或密码错误'})
 
