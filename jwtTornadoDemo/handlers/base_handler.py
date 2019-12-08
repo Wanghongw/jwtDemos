@@ -7,9 +7,6 @@ import tornado.web
 from utils import jwt_auth
 
 
-# 白名单
-WHITE_LIST = ["/login","/"]
-
 # 进行预设 继承tornado的RequestHandler
 class BaseHandler(tornado.web.RequestHandler):
 
